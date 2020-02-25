@@ -19,5 +19,4 @@ pytest -s -v examples/1_before_after
 ## Requirements
 
 - Python >= 3.6
-- pytest
-- pymongo & MongoDB server for examples `C_fixtures` and `D_class_inherit`
+- requirements listed in [requirements.txt](requirements.txt)
