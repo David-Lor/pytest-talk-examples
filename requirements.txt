@@ -1,2 +1,8 @@
 pytest
+
+# for tests: C_fixtures, D_class_inherit
 pymongo
+
+# for tests: E_mocking
+requests
+responses
