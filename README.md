@@ -1,5 +1,7 @@
 # pyTest talk - slideshow (ES) + examples
 
+![Test](https://github.com/David-Lor/pytest-talk-examples/workflows/Test/badge.svg)
+
 ## Running tests
 
 Run ALL tests with:
