@@ -1,4 +1,5 @@
 *pytest_cache*
+*pycache*
 .vscode
 .idea
 .env
