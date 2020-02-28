@@ -49,6 +49,6 @@ def test_mocked_failing_get(monkeypatch):
     monkeypatch.setattr("requests.get", _mocked_get_404)
 
     with pytest.raises(HTTPError) as error:
-        error: HTTPError
         get_ip()
-        assert error.response.status_code == 404
+
+    assert error.value.response.status_code == 404
