@@ -1,6 +1,7 @@
 """C2 - Test with Yield Fixtures
 Yield fixtures use the "yield" statement to return something to the test function,
-but they keep running after the test.
+but they keep running after the test (similarly to context managers).
+We run 2 identical tests to verify that the data inserted by previous tests is deleted on the fixture.
 https://pytest.readthedocs.io/en/2.9.1/yieldfixture.html
 https://docs.pytest.org/en/latest/yieldfixture.html
 """
@@ -28,11 +29,28 @@ def mongo_collection():
     print("Deleted all documents in Mongo test collection!")
 
 
-def test_insert_read_delete(mongo_collection: Collection):
-    number = random.randint(0, 1000000)
-    data = {"random_number": number}
+@pytest.fixture
+def sample_data():
+    return {
+        "random_number": random.randint(0, 100000)
+    }
 
-    result = mongo_collection.insert_one(data)
+
+def test_insert_read_delete_1(mongo_collection: Collection, sample_data):
+    read = mongo_collection.find({})
+    assert list(read) == []
+
+    result = mongo_collection.insert_one(sample_data)
 
     read = mongo_collection.find_one({"_id": result.inserted_id})
-    assert read["random_number"] == number
+    assert read["random_number"] == sample_data["random_number"]
+
+
+def test_insert_read_delete_2(mongo_collection: Collection, sample_data):
+    read = mongo_collection.find({})
+    assert list(read) == []
+
+    result = mongo_collection.insert_one(sample_data)
+
+    read = mongo_collection.find_one({"_id": result.inserted_id})
+    assert read["random_number"] == sample_data["random_number"]

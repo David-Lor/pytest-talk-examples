@@ -6,3 +6,11 @@ pymongo
 # for tests: E_mocking
 requests
 responses
+pytest-mock
+
+# for tests: G_asyncio
+pytest-asyncio
+httpx
+
+# for tests: H_parallelization
+pytest-xdist
