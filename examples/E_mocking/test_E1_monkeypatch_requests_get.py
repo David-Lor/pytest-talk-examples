@@ -39,13 +39,13 @@ def _mocked_get_404(*args, **kwargs) -> Response:
     return MockedResponse(text=MOCKED_IP, status_code=404)
 
 
-def test_mocked_get(monkeypatch):
+def test_mocked_get_200(monkeypatch):
     monkeypatch.setattr("requests.get", _mocked_get_200)
 
     assert get_ip() == MOCKED_IP
 
 
-def test_mocked_failing_get(monkeypatch):
+def test_mocked_get_404(monkeypatch):
     monkeypatch.setattr("requests.get", _mocked_get_404)
 
     with pytest.raises(HTTPError) as error:

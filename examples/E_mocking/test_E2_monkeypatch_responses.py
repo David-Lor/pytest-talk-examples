@@ -1,4 +1,4 @@
-"""E2 - Test using responses library to mock HTTP calls
+"""E2 - Test using responses library to monkeypatch HTTP calls
 https://github.com/getsentry/responses
 """
 
@@ -21,6 +21,10 @@ def test_mocked_http_call_with_responses_200():
     )
 
     assert get_ip() == MOCKED_IP
+
+    # Verify how many times requests.get was called, and with which params
+    assert len(responses.calls) == 1
+    assert responses.calls[0].request.url == "https://api.ipify.org/?format=raw"
 
 
 @responses.activate

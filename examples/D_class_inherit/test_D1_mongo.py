@@ -27,7 +27,7 @@ class TestMongo(BaseTest):
 class TestMongoOtherCollection(BaseTest):
     """On this test class, we want to use a different collection to read/write documents from/into.
     The teardown method from the BaseTest will use the new collection instead of the BaseTest collection.
-    We specify two equal tests that count how many documents exist on the collection, showing how the BaseTest
+    We run 2 identical tests that count how many documents exist on the collection, showing how the BaseTest
     teardown method uses the new collection name.
     """
     data_to_insert = [
