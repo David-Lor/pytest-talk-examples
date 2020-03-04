@@ -14,6 +14,7 @@ class MockedResponse(Response):
     so we create a custom inheriting class that returns the attribute "_text" when reading "text",
     by overriding the __getattribute__ magic method.
     """
+
     def __init__(self, text, status_code=200):
         super().__init__()
         self._text = text

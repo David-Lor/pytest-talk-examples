@@ -38,5 +38,5 @@ def test_mocked_http_call_with_responses_404():
 
     with pytest.raises(HTTPError) as error:
         get_ip()
-    
+
     assert error.value.response.status_code == 404
