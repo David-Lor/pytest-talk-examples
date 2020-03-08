@@ -1,3 +1,4 @@
+# for all tests
 pytest
 
 # for tests: C_fixtures, D_class_inherit
@@ -14,3 +15,6 @@ httpx
 
 # for tests: H_parallelization
 pytest-xdist
+
+# for ipynb (jupyter notebook)
+jupyter
