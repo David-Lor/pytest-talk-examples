@@ -21,19 +21,22 @@ def mongo_collection():
     client = MongoClient("mongodb://127.0.0.1:27017")
     collection = client["test_database"]["test_collection"]
 
+    # Delete all documents on collections before test run
+    # (to clean possible documents from previous tests)
+    collection.delete_many({})
+    print("Deleted all documents in Mongo test collection!")
+
     print("Returning collection to the test")
     yield collection
 
     # Delete all documents on collection after test run
+    # (to keep it clean for next tests)
     collection.delete_many({})
-    print("Deleted all documents in Mongo test collection!")
 
 
 @pytest.fixture
 def sample_data():
-    return {
-        "random_number": random.randint(0, 100000)
-    }
+    return {"random_number": random.randint(0, 100000)}
 
 
 def test_insert_read_delete_1(mongo_collection: Collection, sample_data):

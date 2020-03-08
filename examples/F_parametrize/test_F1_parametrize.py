@@ -5,7 +5,12 @@ https://docs.pytest.org/en/latest/parametrize.html#parametrize
 import pytest
 
 
-@pytest.mark.parametrize("a,b,expected", [(2, 2, 4), (10, 10, 20), (-5, 5, 0), (0, 0, 0)])
+@pytest.mark.parametrize("a,b,expected", [
+    (2, 2, 4),
+    (10, 10, 20),
+    (-5, 5, 0),
+    (0, 0, 0)
+])
 def test_sum(a, b, expected):
     result = a + b
     assert result == expected

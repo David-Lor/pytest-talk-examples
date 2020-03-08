@@ -9,6 +9,7 @@ from pymongo.collection import Collection
 class BaseTest:
     """The BaseTest will connect to a MongoDB collection, that can be accessed with "self" from the test methods
     """
+
     client: MongoClient
     collection: Collection
 

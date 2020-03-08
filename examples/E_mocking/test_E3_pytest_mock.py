@@ -11,6 +11,7 @@ def test_monkeypatch(mocker):
     Using it as a fixture avoids having to use as context managers or decorators
     (https://github.com/pytest-dev/pytest-mock/#why-bother-with-a-plugin).
     """
+
     def _mocked_divide(a, b):
         return 0
 
