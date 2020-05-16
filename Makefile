@@ -14,5 +14,11 @@ test-all:
 	make test-sequential
 	make test-parallel
 
+install-requirements:
+	pip install -r requirements.txt
+
+run-jupyter:
+	jupyter notebook
+
 help: ## show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'

@@ -4,3 +4,5 @@
 .idea
 .env
 .ipynb_checkpoints
+*.odg
+.*lock.*
