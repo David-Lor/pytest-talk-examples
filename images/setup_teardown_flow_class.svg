@@ -136,7 +136,7 @@
         <rect class="BoundingBox" stroke="none" fill="none" x="6899" y="8799" width="2803" height="1203"/>
         <path fill="rgb(24,47,124)" stroke="none" d="M 8300,10000 L 6900,10000 6900,8800 9700,8800 9700,10000 8300,10000 Z"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 8300,10000 L 6900,10000 6900,8800 9700,8800 9700,10000 8300,10000 Z"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Fira Mono, monospace" font-size="282px" font-weight="400"><tspan class="TextPosition" x="6945" y="9496"><tspan fill="rgb(255,255,255)" stroke="none">setup_function()</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Fira Mono, monospace" font-size="282px" font-weight="400"><tspan class="TextPosition" x="7114" y="9496"><tspan fill="rgb(255,255,255)" stroke="none">setup_method()</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -144,7 +144,7 @@
         <rect class="BoundingBox" stroke="none" fill="none" x="20399" y="8799" width="3303" height="1203"/>
         <path fill="rgb(24,47,124)" stroke="none" d="M 22050,10000 L 20400,10000 20400,8800 23700,8800 23700,10000 22050,10000 Z"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 22050,10000 L 20400,10000 20400,8800 23700,8800 23700,10000 22050,10000 Z"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Fira Mono, monospace" font-size="282px" font-weight="400"><tspan class="TextPosition" x="20441" y="9496"><tspan fill="rgb(255,255,255)" stroke="none">teardown_function()</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Fira Mono, monospace" font-size="282px" font-weight="400"><tspan class="TextPosition" x="20610" y="9496"><tspan fill="rgb(255,255,255)" stroke="none">teardown_method()</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -152,7 +152,7 @@
         <rect class="BoundingBox" stroke="none" fill="none" x="11899" y="8799" width="3303" height="1203"/>
         <path fill="rgb(24,47,124)" stroke="none" d="M 13550,10000 L 11900,10000 11900,8800 15200,8800 15200,10000 13550,10000 Z"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 13550,10000 L 11900,10000 11900,8800 15200,8800 15200,10000 13550,10000 Z"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Fira Mono, monospace" font-size="282px" font-weight="400"><tspan class="TextPosition" x="11941" y="9496"><tspan fill="rgb(255,255,255)" stroke="none">teardown_function()</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Fira Mono, monospace" font-size="282px" font-weight="400"><tspan class="TextPosition" x="12110" y="9496"><tspan fill="rgb(255,255,255)" stroke="none">teardown_method()</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -160,7 +160,7 @@
         <rect class="BoundingBox" stroke="none" fill="none" x="15399" y="8799" width="2803" height="1203"/>
         <path fill="rgb(24,47,124)" stroke="none" d="M 16800,10000 L 15400,10000 15400,8800 18200,8800 18200,10000 16800,10000 Z"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 16800,10000 L 15400,10000 15400,8800 18200,8800 18200,10000 16800,10000 Z"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Fira Mono, monospace" font-size="282px" font-weight="400"><tspan class="TextPosition" x="15445" y="9496"><tspan fill="rgb(255,255,255)" stroke="none">setup_function()</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Fira Mono, monospace" font-size="282px" font-weight="400"><tspan class="TextPosition" x="15614" y="9496"><tspan fill="rgb(255,255,255)" stroke="none">setup_method()</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
