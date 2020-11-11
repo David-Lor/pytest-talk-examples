@@ -4,11 +4,11 @@ Run with: "pytest -v -s ..." to show print output
 """
 
 
-def setup_module(module):
+def setup_module():
     print("A) Setup module. Should run BEFORE any test")
 
 
-def teardown_module(module):
+def teardown_module():
     print("F) Teardown module. Should run AFTER all tests")
 
 

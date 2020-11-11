@@ -6,21 +6,21 @@ Run with: "pytest -v -s ..." to show print output
 my_variable = None
 
 
-def setup_module(module):
+def setup_module():
     global my_variable
     print("A) Setup module. Should run BEFORE any test")
     my_variable = True
 
 
-def teardown_module(module):
+def teardown_module():
     print("D) Teardown module. Should run AFTER all tests")
 
 
-def setup_function(function):
+def setup_function():
     print("B) Setup function. Should run BEFORE each test")
 
 
-def teardown_function(function):
+def teardown_function():
     print("C) Teardown function. Should run AFTER each test")
 
 
