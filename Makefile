@@ -10,14 +10,14 @@ test-sequential: ## run sequential tests, ignoring on-purpose failing and parall
 test-parallel: ## run parallel tests
 	pytest -s -v -n auto examples/H_parallelization
 
-test-all:
+test-all: ## run all tests
 	make test-sequential
 	make test-parallel
 
-install-requirements:
+install-requirements: ## pip install requirements
 	pip install -r requirements.txt
 
-run-jupyter:
+run-jupyter: ## run the jupyter notebook server
 	jupyter notebook
 
 help: ## show this help.
