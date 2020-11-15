@@ -1,5 +1,4 @@
-"""A3 - TEST functions using pytest.raises
-"""
+"""A3 - TEST functions using pytest.raises"""
 
 import pytest
 

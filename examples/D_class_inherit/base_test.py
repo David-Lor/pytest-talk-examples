@@ -1,6 +1,5 @@
 """D - BASE TEST
-Define a class with setup & teardown methods that will be inherited from test classes
-"""
+Define a class with setup & teardown methods that will be inherited from test classes"""
 
 
 class BaseTest:

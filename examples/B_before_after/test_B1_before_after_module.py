@@ -1,7 +1,6 @@
 """B1 - Test Before & After at Module level
 Functions that run before & after all tests on the module, and before & after each test on the module.
-Run with: "pytest -v -s ..." to show print output
-"""
+Run with: "pytest -v -s ..." to show print output"""
 
 my_variable = None
 

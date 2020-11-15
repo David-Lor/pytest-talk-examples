@@ -1,5 +1,5 @@
-"""A2 - TEST with functions in module level, with a failing test
-"""
+"""A2 - TEST with functions in module level, with failing tests"""
+
 
 def test_failing_zerodivisionerror():
     2 / 0

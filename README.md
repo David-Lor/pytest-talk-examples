@@ -4,7 +4,7 @@
 
 ## Requirements
 
-- Python >= 3.6
+- Python >= 3.6 (virtual env recommended)
 - requirements listed in [requirements.txt](requirements.txt)
 
 ## Running tests
@@ -12,11 +12,15 @@
 Run ALL tests with:
 
 ```bash
-pytest -s -v
+pytest -sv
 ```
 
-Run individual tests with:
+Run individual tests with (example):
 
 ```bash
-pytest -s -v examples/1_before_after
+# Only A1
+pytest -sv examples/A_helloworld/test_A1_helloworld.py
+
+# All modules in B_before_after package
+pytest -sv examples/B_before_after
 ```

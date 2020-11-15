@@ -1,12 +1,13 @@
 """C3 - tmp_path built-in fixture
 Usage of the built-in tmp_path fixture, which provides a temp path to save/read files into/from
-https://docs.pytest.org/en/latest/tmpdir.html
-"""
+https://docs.pytest.org/en/latest/tmpdir.html"""
 
 from pathlib import Path
 
 
 def test_write_read_file(tmp_path: Path):
+    """Create a file 'hello.txt' within the tmp_path, and write lines into it.
+    Then, read the file lines and verify that written lines are on the read file."""
     file_path = tmp_path / "hello.txt"
     file_path = file_path.as_posix()
     lines = [

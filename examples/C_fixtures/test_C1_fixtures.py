@@ -1,8 +1,7 @@
 """C1 - Test with Fixtures
 Fixtures are functions that run before the test where used, and can return something,
 injected on the test as a function parameter.
-https://docs.pytest.org/en/latest/fixture.html
-"""
+https://docs.pytest.org/en/latest/fixture.html"""
 
 import random
 import pytest
@@ -18,4 +17,4 @@ def random_number():
 def test_random_number_fixture(random_number):
     print("B) Test starts")
     assert type(random_number) == int
-    print("C) Test ends")
+    print("C) Test ends with number", random_number)

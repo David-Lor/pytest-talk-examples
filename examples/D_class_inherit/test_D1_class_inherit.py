@@ -1,5 +1,4 @@
-"""D1 - Test class-defined test inheriting from BaseTest
-"""
+"""D1 - Test class-defined test inheriting from BaseTest"""
 
 from .base_test import BaseTest
 
