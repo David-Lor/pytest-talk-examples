@@ -6,7 +6,6 @@
 
 - Python >= 3.6
 - requirements listed in [requirements.txt](requirements.txt)
-- Tests C_fixtures, D_class_inherit require a running MongoDB server on localhost
 
 ## Running tests
 
