@@ -1,6 +1,5 @@
 """E2 - Test using responses library to monkeypatch HTTP calls
-https://github.com/getsentry/responses
-"""
+https://github.com/getsentry/responses"""
 
 import pytest
 import responses

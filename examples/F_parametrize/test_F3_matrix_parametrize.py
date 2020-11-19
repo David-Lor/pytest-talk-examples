@@ -1,6 +1,6 @@
-"""F3 - Test stacking multiple pytest.mark.parametrize decorators to create a matrix of parameters
-https://docs.pytest.org/en/latest/parametrize.html#parametrize
-"""
+"""F3 - Test stacking multiple pytest.mark.parametrize decorators,
+to create a matrix of parameters (all possible combinations).
+https://docs.pytest.org/en/latest/parametrize.html#parametrize"""
 
 import pytest
 

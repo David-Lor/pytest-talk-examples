@@ -1,6 +1,5 @@
 """H1 - Run multiple tests in parallel using pytest-xdist
-https://github.com/pytest-dev/pytest-xdist
-"""
+https://github.com/pytest-dev/pytest-xdist"""
 
 import pytest
 from time import sleep

@@ -1,59 +1,30 @@
 """C2 - Test with Yield Fixtures
 Yield fixtures use the "yield" statement to return something to the test function,
 but they keep running after the test (similarly to context managers).
-We run 2 identical tests to verify that the data inserted by previous tests is deleted on the fixture.
 https://pytest.readthedocs.io/en/2.9.1/yieldfixture.html
-https://docs.pytest.org/en/latest/yieldfixture.html
-"""
+https://docs.pytest.org/en/latest/yieldfixture.html"""
 
 import random
 import pytest
-from pymongo import MongoClient
-from pymongo.collection import Collection
 
 
 @pytest.fixture
-def mongo_collection():
-    """This fixture will create a MongoClient instance and return a collection where we can write and read data.
-    The collection is returned with yield statement to the test.
-    After test run, all documents from the collection are deleted.
-    """
-    client = MongoClient("mongodb://127.0.0.1:27017")
-    collection = client["test_database"]["test_collection"]
-
-    # Delete all documents on collections before test run
-    # (to clean possible documents from previous tests)
-    collection.delete_many({})
-    print("Deleted all documents in Mongo test collection!")
-
-    print("Returning collection to the test")
-    yield collection
-
-    # Delete all documents on collection after test run
-    # (to keep it clean for next tests)
-    collection.delete_many({})
+def random_number():
+    """This fixture will return a random number"""
+    print("A) Fixture starts")
+    number = random.randint(0, 1000)
+    yield number
+    print("D) Fixture ends")
 
 
-@pytest.fixture
-def sample_data():
-    return {"random_number": random.randint(0, 100000)}
+def test_random_number_fixture_yield(random_number):
+    print("B) Test starts")
+    assert type(random_number) == int
+    print("C) Test ends with number", random_number)
 
 
-def test_insert_read_delete_1(mongo_collection: Collection, sample_data):
-    read = mongo_collection.find({})
-    assert list(read) == []
-
-    result = mongo_collection.insert_one(sample_data)
-
-    read = mongo_collection.find_one({"_id": result.inserted_id})
-    assert read["random_number"] == sample_data["random_number"]
-
-
-def test_insert_read_delete_2(mongo_collection: Collection, sample_data):
-    read = mongo_collection.find({})
-    assert list(read) == []
-
-    result = mongo_collection.insert_one(sample_data)
-
-    read = mongo_collection.find_one({"_id": result.inserted_id})
-    assert read["random_number"] == sample_data["random_number"]
+def test_random_number_fixture_fails(random_number):
+    """Even if a test fails, the fixture runs the code after the yield statement"""
+    print("B) Test starts")
+    assert type(random_number) == str
+    print("C) Test ends (it should not reach this point!)")

@@ -1,5 +1,4 @@
-"""E1 - Test monkeypatching requests.get() method manually
-"""
+"""E1 - Test monkeypatching requests.get() method manually"""
 
 import pytest
 from requests import Response, HTTPError
@@ -12,8 +11,7 @@ MOCKED_IP = "0.0.0.0"
 class MockedResponse(Response):
     """The requests.Response class does not allow setting the attribute "text",
     so we create a custom inheriting class that returns the attribute "_text" when reading "text",
-    by overriding the __getattribute__ magic method.
-    """
+    by overriding the __getattribute__ magic method."""
 
     def __init__(self, text, status_code=200):
         super().__init__()
@@ -29,14 +27,12 @@ class MockedResponse(Response):
 
 def _mocked_get_200(*args, **kwargs) -> Response:
     """We will monkeypatch the get() method from the installed requests library.
-    ipify_client.get_ip() will use this mocked function instead of the original method.
-    """
+    ipify_client.get_ip() will use this mocked function instead of the original method."""
     return MockedResponse(text=MOCKED_IP, status_code=200)
 
 
 def _mocked_get_404(*args, **kwargs) -> Response:
-    """This function returns 404, thus ipify_client.get_ip() will return RequestError
-    """
+    """This function returns 404, thus ipify_client.get_ip() will return RequestError"""
     return MockedResponse(text=MOCKED_IP, status_code=404)
 
 
