@@ -1,17 +1,17 @@
 # for all tests
-pytest
+pytest>=6.1.2
 
 # for tests: E_mocking
-requests
-responses
-pytest-mock
+requests>=2.25.0
+responses>=0.12.1
+pytest-mock>=3.3.1
 
 # for tests: G_asyncio
-pytest-asyncio
-httpx
+pytest-asyncio>=0.14.0
+httpx>=0.16.1
 
 # for tests: H_parallelization
-pytest-xdist
+pytest-xdist>=2.1.0
 
 # for ipynb (jupyter notebook)
-jupyter
+jupyter>=1.0.0
